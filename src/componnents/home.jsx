@@ -61,7 +61,7 @@ export default function Home() {
     //   )
     // );
 
-    // setEditId(null);
+    setEditId(null);
 
   } catch (err) {
     console.log(err);
