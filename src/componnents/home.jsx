@@ -23,7 +23,7 @@ export default function Home() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const dat = await axios.get('http://localhost:3000/home');
+                const dat = await axios.get('https://backendtudo.onrender.com/home');
 
                 setVal(dat.data);
 
@@ -41,7 +41,7 @@ export default function Home() {
 
   const updateData = async (id) => {
   try {
-    await axios.put(`http://localhost:3000/home/${id}`, {
+    await axios.put(`https://backendtudo.onrender.com/home/${id}`, {
       name: editName,
       age: editAge,
       study: editStudy,
@@ -70,7 +70,7 @@ export default function Home() {
 
     const addData = async () => {
         try {
-            const val = await axios.post('http://localhost:3000/home', {
+            const val = await axios.post('https://backendtudo.onrender.com/home', {
                 id: id,
                 name: name,
                 age: age,
@@ -89,7 +89,7 @@ export default function Home() {
     const deleData = async (id) => {
         console.log(id);
 
-        await axios.delete(`http://localhost:3000/home/${id}`);
+        await axios.delete(`https://backendtudo.onrender.com/home/${id}`);
     };
 
 
